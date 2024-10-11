@@ -12,7 +12,8 @@
                 <Setter Property="FontFamily" Value="Montserrat-Regular" />
                 <Setter Property="FontSize" Value="{StaticResource LargeSize}" />
                 <Setter Property="HorizontalOptions" Value="Center" />
-                <Setter Property="Margin" Value="0, 12, 0, 6" />
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="0, 0, 0, 6" />
             </Style>
 
             <Style x:Key="ProductPriceStyle" TargetType="{x:Type Label}">
@@ -28,7 +29,7 @@
                 <Setter Property="WidthRequest" Value="42" />
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="VerticalOptions" Value="End" />
-                <Setter Property="Margin" Value="0,0,0,24" />
+                <Setter Property="Margin" Value="0,0,0,10" />
             </Style>
 
             <Style x:Key="AddImageStyle" TargetType="{x:Type Image}">
@@ -42,8 +43,9 @@
         <Grid Margin="0" Padding="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="250" />
+                <RowDefinition Height="31" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <!--  IMAGE  -->
             <Image
@@ -59,12 +61,12 @@
             </Grid>
             <!--  NAME  -->
             <Label
-                Grid.Row="1"
+                Grid.Row="2"
                 Style="{StaticResource ProductNameStyle}"
                 Text="{Binding Name, Mode=OneTime, Converter={StaticResource ToUpperConverter}}" />
             <!--  PRICE  -->
             <Label
-                Grid.Row="2"
+                Grid.Row="3"
                 Style="{StaticResource ProductPriceStyle}"
                 Text="{Binding Price, Mode=OneTime, StringFormat='${0:N}'}" />
         </Grid>

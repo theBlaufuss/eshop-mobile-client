@@ -5,7 +5,7 @@
     xmlns:effects="clr-namespace:eShopOnContainers.Effects"
     x:Class="eShopOnContainers.Controls.AddBasketButton">
         <Ellipse  
-                Fill="#83D01B"
+                Fill="{StaticResource GoldColor}"
                 StrokeThickness="0"
                 HeightRequest="48"
                 WidthRequest="48"

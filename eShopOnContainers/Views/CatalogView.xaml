@@ -67,7 +67,7 @@
             IsRunning="{Binding IsBusy}"
             IsVisible="{Binding IsBusy}"
             VerticalOptions="Center"
-            Color="{StaticResource LightGreenColor}"/>
+            Color="{StaticResource GoldColor}"/>
 
         <views:BadgeView
             x:Name="badge"
@@ -80,7 +80,7 @@
                 <Button
                     ImageSource="{DynamicResource BasketIconForTitleImageSource}"
                     Command="{Binding ViewBasketCommand, Mode=OneTime}"
-                    BackgroundColor="{StaticResource LightGreenColor}"
+                    BackgroundColor="{StaticResource GoldColor}"
                     Padding="8"
                     CornerRadius="8"
                     HeightRequest="56"

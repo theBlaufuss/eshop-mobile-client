@@ -45,7 +45,7 @@
 				<Setter Property="FontSize"
                     Value="{StaticResource LittleSize}" />
 				<Setter Property="TextColor"
-                    Value="{StaticResource GreenColor}" />
+                    Value="{StaticResource BlackColor}" />
 				<Setter Property="HorizontalOptions"
                     Value="Start" />
 			</Style>
@@ -55,7 +55,7 @@
 				<Setter Property="FontFamily"
                     Value="Montserrat-Regular" />
 				<Setter Property="TextColor"
-                    Value="{StaticResource WhiteColor}" />
+                    Value="{StaticResource BlackColor}" />
 				<Setter Property="HorizontalOptions"
                     Value="Center" />
 				<Setter Property="VerticalOptions"
@@ -132,13 +132,13 @@
                     HorizontalOptions="Center">
 					<Label
                         Text="["
-                        TextColor="{StaticResource LightGreenColor}"/>
+                        TextColor="{StaticResource GoldColor}"/>
 					<Label
                         Text="LOGIN"
                         FontAttributes="Bold"/>
 					<Label
                         Text="]"
-                        TextColor="{StaticResource LightGreenColor}"/>
+                        TextColor="{StaticResource GoldColor}"/>
 				</StackLayout>
 				<Grid
                     Grid.Column="1"
@@ -230,14 +230,14 @@
                    HorizontalOptions="Center"
                    Grid.Row="2" Padding="40">
 				<Image
-                    Source="eshop_logo.png"
+                    Source="juvolit_logo.png"
                     Aspect="AspectFill"
                     WidthRequest="300"
-                    HeightRequest="85"/>
+                    />
 			</Frame>
 			<!-- LOGIN BUTTON -->
 			<Grid
-                BackgroundColor="{StaticResource LightGreenColor}"
+                BackgroundColor="{StaticResource GoldColor}"
                 Grid.Row="4"
                 Padding="0"
                 ColumnSpacing="0"
