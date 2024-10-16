@@ -15,6 +15,9 @@ using eShopOnContainers.Services.Theme;
 using eShopOnContainers.Services.User;
 using eShopOnContainers.Views;
 using Microsoft.Extensions.Logging;
+using Square.Authentication;
+using Square;
+using static Android.Gms.Common.Apis.Api;
 
 namespace eShopOnContainers;
 
@@ -73,12 +76,18 @@ public static class MauiProgram
                 var requestProvider = serviceProvider.GetService<IRequestProvider>();
                 var fixUriService = serviceProvider.GetService<IFixUriService>();
                 var settingsService = serviceProvider.GetService<ISettingsService>();
-
+                var squareClient = new SquareClient.Builder()
+    .BearerAuthCredentials(
+        new BearerAuthModel.Builder(
+            "AccessToken"
+        )
+        .Build())
+    .Build();
                 var aes =
                     new AppEnvironmentService(
                         new BasketMockService(), new BasketService(requestProvider, fixUriService),
                         new CampaignMockService(), new CampaignService(requestProvider, fixUriService),
-                        new CatalogMockService(), new CatalogService(requestProvider, fixUriService),
+                        new CatalogMockService(), new SquareCatalogService(squareClient),
                         new OrderMockService(), new OrderService(requestProvider),
                         new UserMockService(), new UserService(requestProvider));
 

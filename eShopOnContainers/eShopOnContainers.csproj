@@ -66,6 +66,7 @@
 		<PackageReference Include="IdentityModel" Version="6.2.0" />
 		<PackageReference Include="PCLCrypto" Version="2.1.40-alpha" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+		<PackageReference Include="Square" Version="38.1.0" />
 	</ItemGroup>
 
 	<!-- Build Properties must be defined within these property groups to ensure successful publishing
